@@ -1,0 +1,8 @@
+.tab a:nth-child(1){
+    color:#353535;
+    border-bottom: 2px solid #353535;
+}
+.tab a:nth-child(2){
+    color:#C1C2CA;
+    border: none;
+}

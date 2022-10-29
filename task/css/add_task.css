@@ -1,0 +1,295 @@
+/* 1号自定义字体 */
+
+@font-face {
+    font-family: one;
+    src: url('../font/沐瑶软笔手写体.ttf');
+}
+
+@font-face {
+    font-family: two;
+    src: url('../font/方正粗圆简体.ttf');
+}
+
+@font-face {
+    font-family: Fangzhenglantingyuan;
+    src: url('../font/方正兰亭圆简体.ttf');
+}
+
+@font-face {
+    font-family: siyuanCN;
+    src: url('../font/思源宋体SC-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: siyuanEN;
+    src: url('../font/GenShinGothic-Light.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+}
+
+/* 设置HTML最小高度占满整屏幕 */
+html,
+body {
+    width: 100%;
+    min-height: 800px;
+    min-width: 1200px;
+}
+
+.banner_box {
+    width: 100%;
+}
+
+.home {
+    display: block;
+    text-decoration: none;
+    font-family: Fangzhenglantingyuan;
+    width: 130px;
+    height: 55px;
+    line-height: 54px;
+    background: url('../images/btn_goIndex.png') no-repeat center;
+    background-size: contain;
+    font-size: 20px;
+    color: #fff;
+    box-sizing: border-box;
+    padding-left: 65px;
+    position: absolute;
+    left: 72px;
+    top: 25px;
+    letter-spacing: 5px;
+}
+
+.logout {
+    display: block;
+    text-decoration: none;
+    font-family: Fangzhenglantingyuan;
+    width: 198px;
+    height: 55px;
+    line-height: 54px;
+    background: url('../images/logout.png') no-repeat center;
+    background-size: contain;
+    font-size: 18px;
+    color: #fff;
+    box-sizing: border-box;
+    padding-left: 95px;
+    position: absolute;
+    letter-spacing: 5px;
+    right: 52px;
+    top: 25px;
+}
+
+.banner {
+    width: 100%;
+    min-width: 800px;
+    max-height: 420px;
+    object-fit: cover;
+}
+
+.box {
+    margin: 0 auto;
+    background: url('../images/todolist/book.png') no-repeat center;
+    background-size: 100% 100%;
+    /* width: 1004px; */
+    width: 1100px;
+    height: 1043px;
+    margin-top: 50px;
+    padding-left: 50px;
+    box-sizing: border-box;
+    padding-top: 50px;
+    padding-right: 76px;
+    position: relative;
+    z-index: 1;
+}
+
+.scan_task {
+    position: absolute;
+    right: 120px;
+    top: 30px;
+    z-index: 2;
+}
+
+.scan_task a {
+    position: absolute;
+    /* margin-top: -28px; */
+    font-size: 20px;
+    /* height: 120px; */
+    text-decoration: none;
+    color: #B78550;
+    writing-mode: vertical-lr;
+    letter-spacing: 8px;
+    /*2022.3.14*/
+    width: 176px;
+    margin-top: 36px;
+    margin-left: 5px;
+    height: 122px;
+    background: url('../images/todolist/button_scan.png') no-repeat center;
+    background-size: contain;
+}
+
+.scan_task img {
+    position: absolute;
+    margin-top: 65px;
+    margin-left: 5px;
+}
+
+.head {
+    display: flex;
+    /* height: 57px; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.head img {
+    width: 30px;
+}
+
+.head .sub_box {
+    width: 258px;
+    height: 57px;
+    background: #fff;
+    border-radius: 35px;
+    line-height: 57px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    margin-right: 35px;
+}
+
+.title {
+    font-size: 49px;
+    color: #6191FF;
+    font-weight: 600;
+    width: 500px;
+    text-align: center;
+    font-family: Fangzhenglantingyuan;
+    text-shadow: 0 3px 0 #d1dfff;
+}
+
+.subjectName {
+    height: 14px;
+    line-height: 14px;
+    /* padding: 0 25px; */
+    padding-right: 25px;
+    display: inline-block;
+    color: #D6D6D6;
+    font-size: 18px;
+    border-right: 2px solid #D6D6D6;
+}
+
+.choose {
+    display: inline-block;
+    color: #6191FF;
+    border: none;
+    font-size: 18px;
+    width: 66px;
+    margin-left: 14px;
+    background: transparent;
+}
+
+.choose:focus {
+    outline: none;
+}
+
+
+
+
+.box_body {
+    background: #FFF4EB;
+    box-shadow: inset 0px 0px 5px 0px rgba(255, 166, 135, 1);
+    margin-top: 58px;
+    border-radius: 60px;
+    padding-top: 50px;
+}
+
+.textBox {
+    width: 786px;
+    height: 247px;
+    position: relative;
+    font-family: siyuanCN;
+    background: #F8FAFF;
+    border-radius: 33px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    margin: 0 auto;
+    box-shadow: inset 0px 2px 0px 0px rgba(64, 116, 236, 1);
+    border: 5px solid #6191FF;
+}
+
+.write_words {
+    width: 670px;
+    height: 136px;
+    display: block;
+    font-size: 18px;
+    color: #666;
+    margin: 0 auto;
+    line-height: 24px;
+    text-indent: 5px;
+    border-radius: 14px;
+    resize: none;
+    outline: none;
+    border: none;
+    text-indent: 2em;
+    box-sizing: border-box;
+/*     padding-top: 44px; */
+}
+
+.write_words::placeholder {
+    color: #cbc9c9a2;
+}
+
+/*提交按钮*/
+.submit {
+    width: 201px;
+    height: 57px;
+    text-align: center;
+    /* background: #577FEF; */
+    background: url('../images/todolist/button_submit.png') no-repeat center;
+    background-size: contain;
+    color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: -30px;
+    left: 287.5px;
+}
+
+.words_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 76px;
+}
+
+.words_box p {
+    width: 274px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    font-weight: 500;
+    background: #FFEBDB;
+    border-radius: 17px;
+    font-size: 18px;
+    color: #CEAEA6;
+    /* font-family: 'siyuanCN'; */
+    margin: 0 24px;
+}
+
+.img_box {
+    /* width:750px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    padding-bottom: 64px;
+}
+
+.img_box img {
+    width: 314px;
+    margin: 0 30px;
+}

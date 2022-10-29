@@ -1,0 +1,476 @@
+/* 1号自定义字体 */
+
+@font-face {
+    font-family: one;
+    src: url('../font/沐瑶软笔手写体.ttf');
+}
+
+@font-face {
+    font-family: Fangzhenglantingyuan;
+    src: url('../font/方正兰亭圆简体.ttf');
+}
+
+@font-face {
+    font-family: siyuanCN;
+    src: url('../font/思源宋体SC-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: siyuanEN;
+    src: url('../font/GenShinGothic-Light.woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 800px;
+    min-width: 1200px;
+}
+
+.banner_box {
+    width: 100%;
+}
+
+.home {
+    display: block;
+    text-decoration: none;
+    font-family: Fangzhenglantingyuan;
+    width: 130px;
+    height: 55px;
+    line-height: 54px;
+    background: url('../images/btn_goIndex.png') no-repeat center;
+    background-size: contain;
+    font-size: 20px;
+    color: #fff;
+    box-sizing: border-box;
+    padding-left: 65px;
+    position: absolute;
+    left: 72px;
+    top: 25px;
+    letter-spacing: 5px;
+}
+
+.logout {
+    display: block;
+    text-decoration: none;
+    font-family: Fangzhenglantingyuan;
+    width: 198px;
+    height: 55px;
+    line-height: 54px;
+    background: url('../images/logout.png') no-repeat center;
+    background-size: contain;
+    font-size: 18px;
+    color: #fff;
+    box-sizing: border-box;
+    padding-left: 95px;
+    position: absolute;
+    letter-spacing: 5px;
+    right: 52px;
+    top: 25px;
+}
+
+.banner {
+    width: 100%;
+    min-width: 800px;
+    max-height: 420px;
+    object-fit: cover;
+}
+
+.box {
+    margin: 0 auto;
+    background: url('../images/todolist/book.png') no-repeat center;
+    background-size: 100% 100%;
+    /* width: 1004px; */
+    width: 1100px;
+    height: 1120px;
+    margin-top: 50px;
+    padding-left: 50px;
+    box-sizing: border-box;
+    padding-top: 50px;
+    padding-right: 76px;
+    position: relative;
+    z-index: 1;
+}
+
+.head {
+    display: flex;
+    /* height: 57px; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.head img {
+    width: 30px;
+}
+
+.head form {
+    width: 300px;
+    height: 57px;
+    background: #fff;
+    border-radius: 35px;
+    line-height: 57px;
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+
+.subjectName {
+    height: 14px;
+    line-height: 14px;
+    /* padding: 0 25px; */
+    padding-right: 25px;
+    display: inline-block;
+    color: #D6D6D6;
+    font-size: 18px;
+    border-right: 2px solid #D6D6D6;
+}
+
+.choose {
+    display: inline-block;
+    color: #6191FF;
+    border: none;
+    font-size: 18px;
+    width: 66px;
+    margin-left: 14px;
+    background: transparent;
+}
+
+.choose:focus {
+    outline: none;
+}
+
+.head input {
+    margin-left: 20px;
+    font-size: 18px;
+    color: #6C8CF7;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.title {
+    font-size: 49px;
+    color: #6191FF;
+    font-weight: 600;
+    width: 544px;
+    text-align: center;
+    font-family: Fangzhenglantingyuan;
+    text-shadow: 0 3px 0 #d1dfff;
+}
+
+.add_task {
+    position: absolute;
+    right: 120px;
+    top: 30px;
+    z-index: 2;
+}
+
+.add_task a {
+    position: absolute;
+    /* margin-top: -28px; */
+    font-size: 20px;
+    /* height: 120px; */
+    height: 122px;
+    text-decoration: none;
+    color: #B78550;
+    writing-mode: vertical-lr;
+    letter-spacing: 8px;
+    /*2022.3.8*/
+    display: block;
+    width:176px;
+    margin-top: 40px;
+    background: url('../images/todolist/button_addTaks.png') no-repeat center;
+    background-size: contain;
+}
+
+.add_task img {
+    position: absolute;
+    margin-top: 65px;
+    margin-left: 5px;
+}
+
+.sub_box {
+    width: 260px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 10px;
+    background: #fff;
+    padding: 4px 0px;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #B78550;
+    background: white;
+    font-size: 16px;
+    width: 100px;
+    height: 24px;
+    /*上左，上右边框圆角，下左下右不变*/
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    font-weight: 400;
+}
+
+.unfinished,
+.finished {
+	overflow: auto;
+	width: 977px;
+	height: 461px;
+	padding: 96px 15px 10px 15px;
+	box-sizing: border-box;
+	border-radius: 44px;
+	margin-top: 46px;
+	position: relative;
+	z-index: 1;
+}
+
+.unfinished {
+    /* background: #FFF0D0;
+    border: 5px solid #fbe9bc;
+    box-shadow: 0px 0px 0px 9px #6191FF; */
+/*
+    overflow: auto;
+    width: 932px;
+    height: 416px;
+    padding: 81px 11px 10px 15px;
+    box-sizing: border-box;
+*/
+    background: url('../images/todolist/bg_unfinished.png') no-repeat center;
+    background-size: contain;
+}
+
+.unfinished_contain {
+    width: 947px;
+    height: 336px;
+    overflow: auto;
+    border-radius: 0 0 40px 40px;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 0px 25px;
+    margin: auto;
+}
+
+.unfinished_title {
+    color: #BE5F00;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../images/todolist/bg_1.png') no-repeat center;
+    background-size: cover;
+}
+
+.unfinished_title span {
+    padding: 0 5px;
+}
+
+.unfinished .unfinished_box {
+    display: flex;
+    align-items: center;
+    height: 68px;
+    background: #fff;
+    box-sizing: border-box;
+    /* padding-left: 30px; */
+    border-bottom: 1px solid #EFF3F5;
+}
+
+.unfinished_box a:nth-of-type(1) {
+    margin-left: 40px;
+}
+
+.unfinished_box a:nth-of-type(2) {
+    margin-left: 20px;
+}
+
+.finished {
+    /* background: #F3FFF9;
+    border: 5px solid #92E8C0;
+    box-shadow: 0px 0px 0px 9px #6191ff;
+    overflow: auto;
+    margin-top: 40px; */
+    margin-top: 0px;
+    /*
+    overflow: auto;
+    width: 932px;
+    height: 416px;
+    padding: 81px 11px 10px 15px;
+    box-sizing: border-box;
+*/
+    background: url('../images/todolist/bg_finished.png') no-repeat center;
+    background-size: contain;
+}
+
+.finished_title {
+    color: #36805E;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../images/todolist/bg_2.png') no-repeat center;
+    background-size: cover;
+}
+
+.finished_title span {
+    padding: 0 5px;
+}
+
+.finished_box {
+    display: flex;
+    align-items: center;
+    height: 68px;
+    background: #fff;
+    box-sizing: border-box;
+    /* padding-left: 30px; */
+    border-bottom: 1px solid #EFF3F5;
+}
+.finished_contain {
+   width: 947px;
+    height: 336px;
+    overflow: auto;
+    border-radius: 0 0 40px 40px;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin: auto;
+}
+.finished_box a:nth-of-type(1) {
+    margin-left: 40px;
+}
+
+.finished_box a:nth-of-type(2) {
+    margin-left: 20px;
+}
+
+.task {
+    height: 49px;
+    width: 100%;
+    background: white;
+    border-bottom: 2px dashed #f1cba865;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 6px;
+    font-size: 18px;
+}
+
+.task div {
+    display: flex;
+    align-items: center;
+}
+
+.task a img {
+    width: 30px;
+}
+
+.subject {
+    width: 52px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    font-size:18px;
+    color: #fff;
+    /* font-family: siyuanCN; */
+    background: #5F8BF0;
+    border-radius: 20px 15px 0 20px;
+    border: 1px solid rgba(255, 255, 255, 0.288);
+}
+
+.content {
+    color: #666666;
+    margin-left: 15px;
+    /*
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+*/
+    width: 475px;
+    font-size:20px;
+}
+
+.time {
+    /* width: 160px; */
+    font-size: 20px;
+    color: #999;
+    text-align: center;
+    font-family: siyuanEN;
+    font-weight: 600;
+    margin-left: 17px;
+}
+
+.separator {
+    margin-left: 20px;
+    color: #e4e4e4;
+}
+
+.unfinished_contain::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    color: #FE935B;
+}
+
+.unfinished_contain::-webkit-scrollbar-track {
+    width: 10px;
+    background: rgba(#101F1C, 0.1);
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+    margin-bottom: 25px;
+}
+
+.unfinished_contain::-webkit-scrollbar-thumb {
+    background-color: #FE935B;
+    background-clip: padding-box;
+    height: 3px;
+    min-height: 3px;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+}
+
+.unfinished_contain::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(#101F1C, 1);
+}
+
+.finished_contain::-webkit-scrollbar {
+    width: 5px;
+    /* height: 5px; */
+    color: #FE935B;
+}
+
+.finished_contain::-webkit-scrollbar-track {
+    width: 5px;
+    background: rgba(#101F1C, 0.1);
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+    margin-bottom: 25px;
+}
+
+.finished_contain::-webkit-scrollbar-thumb {
+    background-color: #FE935B;
+    background-clip: padding-box;
+    height: 3px;
+    min-height: 3px;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+}
+
+.finished_contain::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(#101F1C, 1);
+}
