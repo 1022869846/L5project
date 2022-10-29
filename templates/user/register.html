@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="../../static/user/css/register.css">
+</head>
+<body>
+    <a class="home" href='/'>首页</a>
+    <div class="box">
+        <div class="tab">
+            <a href="/login">登录</a>
+            <a href="#">注册</a>
+        </div>    
+        <form class="login_box" action="/register_check" method="post">
+            <input type="text" name="username" placeholder="请输入用户名" maxlength="6" required><br>
+            <p class="tips">{{t_error}}</p><br>
+            <input type="password" name="password" required placeholder="请输入密码"><br>
+            <!--提交注册按钮-->
+            <input type="submit" value="注册"><br>
+
+        </form>
+    </div>
+</body>
+</html>

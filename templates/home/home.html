@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>猿力空间</title>
+    <link rel="stylesheet" href="../static/home/css/home.css">
+</head>
+
+<body>
+    <a class="home" href='/welcome'>首页</a>
+
+    <div class="banner_box">
+        <img class="banner" src="../static/home/images/home_banner.png">
+        <!-- 退出登录 -->
+        <a class="logout" href="/logout">退出登录</a>
+    </div>
+
+    <div class="background">
+
+        <!-- 发布微博 -->
+        <form action="/create_blog" class="send_box" method="post">
+            <p class="words">选择你想发布的内容：</p>
+            <div class="table_box">
+                <label class="table checked_default" for="content1">
+                    早安，世界！
+                </label>
+                <label class="table" for="content2">
+                    夜深了～晚安
+                </label>
+                <label class="table" for="content3">
+                    开学，你准备好了吗？
+                </label>
+                <label class="table" for="content4">
+                    白白胖胖，充满希望
+                </label>
+                <label class="table" for="content5">
+                    今天的胃是128G的
+                </label>
+                <label class="table" for="content6">
+                    我是巧克力，乖巧刻苦又努力
+                </label>
+                <label class="table" for="content7">
+                    钻牛角尖的人会变成牛角包哦
+                </label>
+                <label class="table" for="content8">
+                    生活开始对我这个小泡芙加奶油了
+                </label>
+                <label class="table" for="content9">
+                    越努力越幸运
+                </label>
+                <label class="table" for="content10">
+                    没错，我就是那么帅
+                </label>
+                <label class="table" for="content11">
+                    放假了，超级开心！
+                </label>
+                <label class="table" for="content12">
+                    其实我不是胖，只是懒得瘦
+                </label>
+                <label class="table" for="content13">
+                    加油！
+                </label>
+
+                <input type="radio" id="content1" value="早安，世界！" name="content" checked>
+                <input type="radio" id="content2" value="夜深了～晚安" name="content">
+                <input type="radio" id="content3" value="开学，你准备好了吗？" name="content">
+                <input type="radio" id="content4" value="白白胖胖，充满希望" name="content">
+                <input type="radio" id="content5" value="今天的胃是128G的" name="content">
+                <input type="radio" id="content6" value="我是巧克力，乖巧刻苦又努力" name="content">
+                <input type="radio" id="content7" value="钻牛角尖的人会变成牛角包哦" name="content">
+                <input type="radio" id="content8" value="生活开始对我这个小泡芙加奶油了" name="content">
+                <input type="radio" id="content9" value="越努力越幸运" name="content">
+                <input type="radio" id="content10" value="没错，我就是那么帅" name="content">
+                <input type="radio" id="content11" value="放假了，超级开心！" name="content">
+                <input type="radio" id="content12" value="其实我不是胖，只是懒得瘦" name="content">
+                <input type="radio" id="content13" value="加油！" name="content">
+            </div>
+            <div class="btn_box">
+                <p class="choose_mood">心情选择：</p>
+                <select class="select" name="mood" id="mood">
+                    <option value="开怀大笑.png" name="mood" selected> 开怀大笑</option>
+                    <option value="斗志昂扬.png" > 斗志昂扬</option>
+                    <option value="心花怒放.png" > 心花怒放</option>
+                    <option value="胸有成竹.png" > 胸有成竹</option>
+                    <option value="闷闷不乐.png" > 闷闷不乐</option>
+                    <option value="痛哭流涕.png" > 痛哭流涕</option>
+                </select>
+                <div class="mood_show">
+                    <img src="../static/home/images/开怀大笑.png">
+                </div>
+                <input class="submitBtn" type="submit" value="立即发布">
+            </div>
+        </form>
+    </div>
+    <!-- 模板 for 展示博客信息 -->
+    <div class="blog_box">
+        {% for blog in t_blogs %}
+        <div class="blog">
+            <div class="blog_content">
+                <img class="head" src="../static/home/images/{{ blog['head'] }}" alt="">
+                <div class="blog_content_box">
+                    <p class="author">{{ blog['username'] }}</p>
+                    <div class="blog_content_box_box">
+                        <p class="show_content">{{ blog['content'] }}</p>
+                        <img class="show_mood" src="../static/home/images/{{ blog['mood'] }}" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <p class="time">{{ blog['time'] }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+<script src="../static/home/js/jquery-3.3.1.min.js"></script>
+<script src="../static/home/js/home.js"></script>
+
+</html>

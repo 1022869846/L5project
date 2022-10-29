@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>任务本</title>
+	<link rel="stylesheet" href="../../static/task/css/task.css">
+</head>
+
+<body>
+
+	<div class="banner_box">
+		<a class="home" href='/'>首页</a>
+		<img class="banner" src="../../static/task/images/todolist/banner.png">
+		<!-- 退出登录 -->
+		<a class="logout" href="/logout">退出登录</a>
+	</div>
+
+	<div class="box">
+		<div class="add_task">
+			<a href="/add_task"></a>
+		</div>
+		<div class="head">
+			<p class="title">{{ t_username }}的任务本</p>
+			<form action="/task">
+				<p class="subjectName">科目</p>
+				<select class="choose" name="subject">
+					{% for i in t_options %}
+					{% if i == t_subject %}
+					<option value="{{ i }}" selected>{{ i }}</option>
+					{% else %}
+					<option value="{{ i }}">{{ i }}</option>
+					{% endif %}
+					{% endfor %}
+				</select>
+				<input type="submit" value="查询">
+			</form>
+		</div>
+		<!-- 显示用户任务列表中的信息，未完成-->
+		<div class="unfinished">
+			<div class="unfinished_contain">
+				{% for i in t_tasks %}
+				{% if i['state'] == '未完成' %}
+
+				<div class="unfinished_box">
+					<p class="subject"> {{ i['subject'] }}</p>
+					<p class="content" alt="{{ i['content'] }}">{{ i['content'] }}</p>
+
+					<p class="time">{{ i['time'] }}</p>
+					<a href="/update_task?_id={{i['_id']}}&state={{i['state']}}">
+						<img src="../../static/task/images/todolist/button_finish.png">
+					</a>
+					<span class="separator">|</span>
+					<a class="delete" href="/delete_task?_id={{i['_id']}}">
+						<img src="../../static/task/images/todolist/button_delete.png">
+					</a>
+				</div>
+				{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+
+		<!-- 显示用户任务列表中的信息，已完成-->
+		<div class="finished">
+			<div class="finished_contain">
+				{% for i in t_tasks %}
+				{% if i['state'] == '已完成' %}
+				<div class="finished_box">
+					<p class="subject"> {{ i['subject'] }}</p>
+					<p class="content" title="{{ i['content'] }}">{{ i['content'] }}</p>
+					<p class="time">{{ i['time'] }}</p>
+					<a href="/update_task?_id={{i['_id']}}&state={{i['state']}}">
+						<img src="../../static/task/images/todolist/button_back.png">
+					</a>
+					<span class="separator">|</span>
+					<a href="/delete_task?_id={{i['_id']}}">
+						<img src="../../static/task/images/todolist/button_delete.png">
+					</a>
+				</div>
+				{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

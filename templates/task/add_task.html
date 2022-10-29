@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>添加任务</title>
+    <link rel="stylesheet" href="../../static/task/css/add_task.css">
+</head>
+
+<body>
+
+    <div class="banner_box">
+        <a class="home" href='/'>首页</a>
+        <img class="banner" src="../../static/task/images/todolist/banner.png">
+        <a class="logout" href="/logout">退出登录</a>
+    </div>
+
+    <form class="box" action="/add_check" method="post">
+        <div class="scan_task">
+            <a href="/task"></a>
+        </div>
+        <div class="head">
+            <p class="title">添加任务</p>
+            <div class="sub_box">
+                <p class="subjectName">科目</p>
+                <select class="choose" name="subject">
+                    {% for i in t_options %}
+                    <option value={{ i }}>{{ i }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="box_body">
+            <div class="textBox">
+                <input class="write_words" type="text" name="content" required maxlength="20" placeholder="写入你想发布的任务~（最多20个字）">
+                <!--提交-->
+                <input class="submit" type="submit">
+            </div>
+
+            <div class="words_box">
+                <img src="../../static/task/images/todolist/line-L.png" alt="">
+                <p>小小编程 大有可为</p>
+                <img src="../../static/task/images/todolist/line-R.png" alt="">
+            </div>
+
+            <div class="img_box">
+                <img src="../../static/task/images/todolist/picture_1.png">
+                <img src="../../static/task/images/todolist/picture_2.png">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
